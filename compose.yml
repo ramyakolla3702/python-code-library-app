@@ -10,28 +10,28 @@ services:
 
 
 
-  auth_service:
+ auth_service:
    image: ramyakolla3702/pythonlibrary:authimage
    ports:
      - "5001:5001"
    deploy:
       replicas: 2
 
-  book_service:
+ book_service:
    image: ramyakolla3702/pythonlibrary:bookimage
    ports:
      - "5002:5002"
    deploy:
       replicas: 2
 
-  borrow_service:
+ borrow_service:
    image: ramyakolla3702/pythonlibrary:borrowimage
    ports:
      - "5003:5003"
    deploy:
       replicas: 2
 
-  frontend:
+ frontend:
    image: ramyakolla3702/pythonlibrary:appimage
    ports:
      - "5000:5000"
@@ -40,3 +40,4 @@ services:
 
    depends_on:
      - "db"
+  
